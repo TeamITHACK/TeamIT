@@ -1,0 +1,1001 @@
+
+/* __________________HEADER________________________*/
+
+.logo {
+height: 215px;
+    width: 250px;
+    display: flex;
+    margin-top: 1%;
+    z-index: 2;
+    margin-left: -22%;
+    position: absolute;
+    margin-bottom: -6%;
+}
+header {
+position: relative;
+    height: 135px;
+    justify-content: space-between;
+    display: flex;
+    -webkit-background-size: 100%;
+    background-color: #8da077;
+    background-size: 100%;
+    z-index: 1;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 0px 100px 0px 355px;
+}
+
+/* вход/регистрация */
+.login button {
+border: none;
+outline: none;
+background: transparent;
+cursor: pointer;
+margin-top: 50%;
+}
+
+
+.categor {
+display: flex;
+    margin-top: 74%;
+    font-family: 'Trocchi', serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+
+.cont {
+display: flex;
+    margin-top: 49%;
+    font-family: 'Trocchi', serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.bron {
+    display: flex;
+    margin-top: 33%;
+    font-family: 'Trocchi', serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+.categor:hover {
+    text-decoration: underline;
+}
+
+.cont:hover {
+       text-decoration: underline;
+}
+
+.bron:hover {
+       text-decoration: underline;
+}
+
+/* __________________BODY________________________*/
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+/* оформление  заголовков/тегов */
+h1,h2,h3,h4,h5 {
+	font-family: 'Trocchi', serif; 
+	text-transform: uppercase;
+	color: #000;
+}
+
+h1 {
+	font-size: 40px;
+	color: #ccc;
+}
+
+h2{
+	font-size: 37px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h4{
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 15px;
+}
+/* оформление ссылки */
+a {
+	text-decoration: none;
+	color: #fff;
+    font-family: 'Trocchi', serif; 
+}
+
+/* __________________КАТЕГОРИИ________________________*/
+
+/* заголовок для категорий */
+.service_title {
+text-align: center;
+    margin: 48px;
+    font-family: 'Trocchi', serif;
+}
+/* оформление для таблицы категорий */
+.service_wrap {
+list-style-type: none;
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-right: 2%;
+margin-left: 2%;
+}
+/* категории (отдельно) */
+.service_card {
+border-radius: 10px;
+height: 250px;
+width: 250px;
+background-color: white;
+margin: 21px;
+display: inline-flex;
+box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/* ссылки в категориях */
+.service_link {
+display: block;
+}
+/* изображение внутри категорий */
+.service_img-wrap {
+height: 250px;
+width: 250px;
+overflow: hidden;
+border-radius: 10px 10px 0 0;
+}
+/* анимация изображений  */
+.service_img {
+margin-top: 10px;
+margin-left: 40px;
+width: 70%;
+transition: all 0.4s ease-in;
+}
+/* воздействие при наведении мыши на изображение */
+.service_img:hover { 
+	transform: scale(1.1);
+ }
+
+/* оформление подписи к категориям */
+.service_desc {
+font-size: 18px;
+    margin-top: -50px;
+    text-align: center;
+    height: 20%;
+    padding-top: 5%;
+    background-color: #8DA077;
+}
+
+/* __________________СЛАЙДЕР________________________*/
+
+/* Слайдер */
+.slider{
+min-width: 70%;
+    position: relative;
+    margin: 26%;
+    margin-top: 2%;
+    max-height: 109%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+}
+/* Картинка масштабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+
+}
+
+#t1 {
+margin-top: -19%;
+    margin-left: 9%;
+    font-family: 'Trocchi', serif;
+    font-weight: bold;
+    font-size: 104pt;
+    color: black;
+    position: absolute;
+}
+#t2 {
+margin-top: -19%;
+    margin-left: 48%;
+    font-family: 'Trocchi', serif;
+    font-weight: bold;
+    font-size: 104pt;
+    color: black;
+    position: absolute; 
+}
+
+
+
+
+/* Кнопки вперед и назад */
+.slider .previous, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/* Анимация слайдов */
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+} /* установка для кнопок влево/вправо прозрачность (анимация)*/
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* Ellipse 1 */
+.ellipse {
+position: absolute;
+    border-radius: 50%;
+    width: 105;
+    height: 105px;
+    left: 52px;
+    top: 250;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+}
+/* Ellipse 2 */
+
+.ellipse_2 {
+position: absolute;
+ border-radius: 50%;
+width: 51.23px;
+height: 51.23px;
+left: 216px;
+top: 340.79px;
+border: 3px solid #000000;
+box-sizing: border-box;
+}
+
+
+/* Line  */
+
+.line_1 {
+position: absolute;
+    width: 195.23px;
+    height: 0px;
+    left: 101px;
+    top: 418px;
+    border: 2px solid #000000;
+    transform: rotate(
+52.07deg
+);   }
+
+    .line_2 {
+position: absolute;
+    width: 54.92px;
+    height: 0px;
+    left: 261px;
+    top: 490px;
+    border: 2px solid #000000;
+    transform: rotate(
+-10.49deg
+);
+    }
+
+
+
+.line_3 {
+position: absolute;
+    width: 197.23px;
+    height: 0px;
+    left: 1072px;
+    top: 837px;
+    border: 2px solid #000000;
+    transform: rotate( 
+117deg
+ );}
+
+    .line_4 {
+position: absolute;
+    width: 54.92px;
+    height: 0px;
+    left: 1069px;
+    top: 930px;
+    border: 2px solid #000000;
+    transform: rotate( 
+-10.49deg
+ );
+    }
+
+
+.gallery2{
+overflow: hidden;
+padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(10, 65vw);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    overflow: scroll;
+    height: 70vh;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+}
+    .gallery {
+
+padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(10, 65vw);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    overflow: scroll;
+    height: 90vh;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+}
+
+.active {
+    scroll-snap-type: unset;
+}
+
+.gallery li {
+    scroll-snap-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 0;
+}
+
+
+/* __________________ОТЗЫВЫ________________________*/
+
+/* блок с рассылкой - главный*/
+.newsletter
+{
+	width: 100%;
+    margin-top: 7%;
+	background: #FFFFFF;
+	padding-bottom: 99px;
+	z-index: 2;
+}
+/* блок с рассылкой рамка */
+.newsletter_border
+{
+	width: 100%;
+	border-top: solid 2px #e3e3e3;
+}
+/* блок с рассылкой - отступ от шапки + линия */
+.newsletter_content
+{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* блок с рассылкой - главный текст*/
+.newsletter_title
+{
+	font-size: 40px;
+	font-weight: 300;
+	color: #1b1b1b;
+	text-align: center;
+}
+/* блок с рассылкой - маленький текст рядом с главным*/
+.newsletter_text
+{
+	font-size: 20px;
+	margin-left: 2%;
+    font-family: 'Trocchi', serif; 
+
+}
+/* блок с рассылкой - кнопка + импут*/
+.newsletter_form_container
+{
+    width: 40%;
+    font-size: 16px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Trocchi', serif;
+    font-weight: bold;
+}
+/* блок в которой кнопка + импут*/
+.newsletter_form
+{
+	width: 30%;
+}
+/* блок с рассылкой - стиль ввода*/
+.newsletter_input
+{
+	width: 100%;
+	height: 40px;
+	border: none;
+	border-bottom: solid 2px #787878;
+	outline: none;
+	text-align: center;
+      font-family: 'Trocchi', serif; 
+}
+
+/* блок с рассылкой - стиль кнопки */
+.newsletter_button
+{
+    position: relative;
+    width: 200px;
+    height: 70px;
+    border: solid 2px #1b1b1b;
+    background: #FFFFFF;
+    cursor: pointer;
+	overflow: hidden;
+margin-top: 5%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/* блок с рассылкой - стиль кнопки внутри*/
+.newsletter_button span
+{
+	display: block;
+	position: relative;
+	z-index: 10;
+	font-size: 16px;
+	font-weight: 600;
+	color: #1b1b1b;
+	background: none;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+/* блок с рассылкой - анимация кнопки*/
+.newsletter_button::after
+{
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 150%;
+    height: 100%;
+    background: #1b1b1b;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+/* блок с рассылкой - наведение / анимация */
+.newsletter_button:hover::after
+{
+	opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+/* блок с рассылкой - смена цвета анимации при наведении (кнопка)*/
+.newsletter_button:hover span
+{
+	color: #FFFFFF;
+}
+
+
+.otz {
+    font-size: 13px;
+    display: flex;
+    border-bottom: 1px solid black;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30% 2%;
+}
+
+
+/* __________________FOOTER (подвал)________________________*/
+
+footer {
+	width: 100%;
+	height: 400px;
+}
+.footer_background{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 550px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #8DA077;
+}
+ /* контакты - форма обратной связи */
+.zayavka {
+   position: relative;
+   display: flex;
+   top: 30px;
+   left: 35px;
+   width: 320px;
+   background: white;
+}
+
+
+.form-left-decoration, .form-right-decoration {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   border-radius: 20px;
+}
+.form-left-decoration {
+   bottom: 60px;
+   left: -30px;
+}
+.form-right-decoration {
+   top: 60px;
+   right: -30px;
+}
+.form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 20px;
+   border-radius: 30px;
+   background: white;
+}
+.form-left-decoration:before {
+   top: -20px;
+}
+.form-left-decoration:after {
+   top: 20px;
+   left: 10px;
+}
+.form-right-decoration:before {
+   top: -20px;
+   right: 0;
+}
+.form-right-decoration:after {
+   top: 20px;
+   right: 10px;
+}
+.form-inner {
+   padding: 30px;
+}
+
+/* кнопка у контактов - стиль кнопки внутри*/
+
+/* __________________оформление блока КОНТАКТОВ________________________*/
+
+.zayavka button 
+{
+	position: relative;
+	width: 150px;
+	height: 50px;
+	border: solid 2px #1b1b1b;
+	background: #FFFFFF;
+	cursor: pointer;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/*  кнопка у контактов - стиль кнопки внутри*/
+.zayavka button span
+{
+	display: block;
+	position: relative;
+	z-index: 10;
+	font-size: 14px;
+	font-weight: 600;
+	color: #1b1b1b;
+	background: none;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+/*  кнопка у контактов - анимация кнопки*/
+.zayavka button::after
+{
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 150%;
+    height: 100%;
+    background: #1b1b1b;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+/*  кнопка у контактов- наведение / анимация */
+.zayavka button:hover::after
+{
+	opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+/*  кнопка у контактов - смена цвета анимации при наведении (кнопка)*/
+.zayavka button:hover span
+{
+	color: #FFFFFF;
+}
+/*  поле ввода - стилизация */
+.form-inner input, .form-inner textarea {
+   display: block;
+   width: 100%;
+   padding: 0 20px;
+   margin-bottom: 5px;
+   background: #E2E2E2;
+   line-height: 40px;
+   border-width: 0;
+   border-radius: 20px;
+}
+.form-inner input[type="submit"] {
+   margin-top: 30px;
+   background: white;
+   border-bottom: 4px solid;
+   color: black;
+   font-size: 14px;
+}
+.form-inner textarea {
+   resize: none;
+}
+.form-inner h3 {
+   margin-top: 0;
+   font-weight: 500;
+   text-align: center;
+   font-size: 24px;
+}
+
+/* карта в подвале */
+
+.carta
+{
+margin-left: 28%;
+margin-top: -15%;
+}
+
+
+/* информация */
+
+
+.information {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: -31%;
+margin-left: 25%;
+width: 75%;
+
+}
+
+
+.service_us {text-decoration: none;
+ text-transform: uppercase;
+  letter-spacing: 3px;}
+
+.service_us h4 {font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;}
+
+.service_us ul a {font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;}
+
+.service_us ul li:not(:last-child) {margin-bottom: 7px;}
+
+.service_us ul li span{ color: white;
+  margin-left: 8px;
+  margin-bottom: 7px;
+  }
+
+
+.about_us {text-decoration: none;
+ text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.about_us h4 {font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;}
+
+.about_us ul a {font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
+}
+
+.about_us li {
+  list-style: none;
+}
+
+.about_us img {
+    margin-right: 10px;
+    margin-bottom: -6px;
+}
+
+.about_us ul li:not(:last-child) {margin-bottom: 7px;}
+
+.about_us ul li span{ color: white;
+  margin-left: 8px;
+  margin-bottom: 7px;}
+
+.categor_us hr { margin: 2%;}
+
+.categor_us {
+ list-style:none;
+text-decoration: none;
+ text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.categor_us h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
+}
+
+
+.categor_us ul a
+{
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
+}
+
+.categor_us ul li:not(:last-child)
+{
+  margin-bottom: 7px;
+}
+.categor_us ul li span
+{
+  color: white;
+  margin-left: 8px;
+  margin-bottom: 7px;
+}
+
+
+
+
+
+/* __________________ОФОРМЛЕНИЕ КНОПОК "ПОДЕЛИТЬСЯ" ________________________*/
+
+/* поделиться в соц. сетях */
+
+.social-icons-1 {
+position: absolute;
+margin-top: 40px;
+margin-left: 50px;
+}
+.social-icons-1 li {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+}
+
+.social-icons-1 img {
+    color: #fff;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 24px;
+    height: 24px;
+    text-align:center;
+    transition: all 0.3s ease-out;
+}
+.social-icons-1 a {
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+.social-icons-1 a:before {
+    transform: scale(1);
+    content: "";
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background: linear-gradient(45deg, white, white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-out;
+}
+.social-icons-1 a:hover:before {
+    transform: scale(0);
+    transition: all 0.3s ease-in;
+}
+.social-icons-1 a:hover i,
+.social-icons-1 a:hover img {
+    transform: scale(1.8);
+    color: #337AB7;
+    transition: all 0.3s ease-in;
+}
+
+/* панель администратора */ 
+
+.admin_enter {
+    width: 20%;
+    height: 390px;
+    background-color: #E2E2E2;
+    display: flex;
+    margin-top: 10%;
+    color: white;
+    flex-direction: column;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.admin_enter h1 {
+    font-size: 220%;
+    color: black;
+}
+
+.admin_enter input {
+    font-size: 13px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+    height: 27px;
+    text-align: center;
+}
+
+#connect_auto:hover {
+    font-size: 13px;
+    color: white;
+    border: 1px solid #cecece;
+    background: black;
+    border-radius: 8px;
+    height: 27px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+   /* АДАПТАЦИЯ */
+
+@media only screen and (max-width: 959px)
+{
+  /* поиск */
+.search {
+display: flex;
+  position: relative;
+  width: 150px;
+}
+.search input, .search button {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  margin-top: 15px;
+  margin-left: 40px;
+}
+.search input {
+  width: 140px;
+  height: 42px;
+  background: white;
+  padding-left: 15px;
+}
+.search img {
+  position: absolute;
+  left: 5px;
+  cursor: pointer;
+  top: 3px;
+}
+.search button {
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 8px;
+  left: -40px;
+  cursor: pointer;
+}
+
+/* вход/регистрация */
+.login button {
+border: none;
+outline: none;
+background: transparent;
+cursor: pointer;
+margin-top: 25%;
+
+}
+/* Отложенные товары */
+.favorites button {
+border: none;
+outline: none;
+background: transparent;
+cursor: pointer;
+margin-top: 25%;
+
+}
+
+
+
+/* карта в подвале */
+
+.carta
+{
+margin-left: 32%;
+margin-top: 4%;
+
+}
+
+
+.footer_background{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 950px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #8DA077;
+}
+
+/* информация */
+
+
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: -42%;
+    margin-left: 46%;
+    width: 40%;
+    font-size: 10px;
+}
+.newsletter_input
+{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: solid 2px #787878;
+  outline: none;
+  margin-top: 40px;
+  text-align: center;
+}
+/* блок с рассылкой - стиль кнопки */
+.newsletter_button
+{
+    position: relative;
+    width: 200px;
+    height: 70px;
+    border: solid 2px #1b1b1b;
+    background: #FFFFFF;
+    cursor: pointer;
+  overflow: hidden;
+     margin-top: 5%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+}
+

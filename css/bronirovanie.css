@@ -1,0 +1,94 @@
+form {
+    margin: 0 auto;
+    padding: 20px;
+    width: 300px; 
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ccc;
+}
+fieldset {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c0392b;
+}
+fieldset legend{
+color: #c0392b;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input {
+    margin-bottom: 10px;
+    width: 95%;
+    height: 24px;
+}
+output {
+    display: inline-block;
+    margin: 0 5px 10px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+input, output {
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    vertical-align: middle;
+    font-family: "Roboto";
+}
+input[type="submit"], .buttonss { 
+    display: inline-block;
+    margin: 0 5px;
+    padding: 6px 15px;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    background: #2c3e50;
+    color: #fff;
+}
+.one-third-width {
+    width: 33.3%;
+}
+.two-third-width {
+    width: 66.6%;
+}
+.half-width {
+    width: 50%;
+}
+
+.one-third-width,
+.two-third-width, 
+.half-width {
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.one-third-width input,
+.two-third-width input {
+    width: 80%;
+}
+.half-width input {
+    width: 80%;
+}
+.half-width input[type="range"] {
+    width: 50%;
+}
+
+.output-area {
+    vertical-align: top;
+}
+
+.buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.buttonss{
+    width: 85%;
+    text-align: center;
+}
+.half-width-2 {
+    width: 100%;
+}

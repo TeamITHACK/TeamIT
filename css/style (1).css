@@ -1,0 +1,65 @@
+﻿
+body{
+
+}
+
+#div_form{
+background-color: rgb(255 255 255);
+    display: flow-root;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    border: 1px solid black;
+}
+
+#modal_menu_body,#modal_menu_body2{
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: -15%;
+    border: 5px double white;
+    padding: 0px;
+    background-color: white;
+    color: white;
+    width: 35%;
+    margin-top: 1%;
+    display: none;
+}
+
+#modal_menu_body h2,#modal_menu_body2 h2{
+
+	font-size: 20px;
+}
+
+form{
+		display: flex; 
+	justify-content: center;
+	flex-direction: column; 
+}
+
+#table_selection{
+	width: 50%;
+	text-align-last: center;
+ }
+
+.menu-img{
+	width: 40%;
+
+}
+
+#vivod_tablic{
+
+}
+
+td,th{
+
+    align-items: center;
+    padding: 11px;
+    font-size: 100%;
+    border: 1px double black;
+}
+
+#add{
+	margin-top: 1%; width: 50%; 
+}
